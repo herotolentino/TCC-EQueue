@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* =================== MAIN CONTENT (Video + Now Serving) =================== */
+.main-display {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* LEFT SECTION: Video */
+.display-left {
+  flex: 1.2;
+  position: relative;
+  
+}
+
+.display-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.display-time {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgb(188, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* RIGHT SECTION: Now Serving */
+.display-right {
+  flex: 1;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-left: 4px solid #ad0000;
+  overflow-y: auto;
+}
+
+/* Header */
+.header-display {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 2px solid #ad0000;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.header-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.header-display h1 {
+  font-size: 22px;
+  color: #ad0000;
+}
+
+/* NOW SERVING */
+.now-serving-section h2 {
+  background-color: #ad0000;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.now-box {
+  border: 2px solid #ad0000;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.now-box h3 {
+  color: #ad0000;
+  margin-bottom: 10px;
+}
+
+.now-box div {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.queue-footer {
+  background: #fff;
+  border-top: 3px solid #ad0000;
+  padding: 15px 25px;
+  text-align: left;
+  color: #333;
+  width: 100%;
+  position: relative;
+}
+.queue-row {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.queue-label {
+  font-weight: 700;
+  width: flex;
+  font-size: 16px;
+  display: flex;
+  background: rgb(188, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.queue-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.queue-list li {
+  margin-left:20px ;
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+}
+
+.queue-separator {
+  border: none;
+  border-top: 3px solid #000;
+}

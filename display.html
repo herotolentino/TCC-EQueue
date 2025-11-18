@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCC E-Queue Display</title>
+  <link rel="icon" type="image/png" href="logoq.png">
+  <link rel="stylesheet" href="styleDisplay.css">
+  <script src="display.js" defer></script>
+</head>
+<body>
+  
+  <div class="main-display">
+
+    <div class="display-left">
+      <video autoplay loop muted class="display-video">
+        <source src="Video.mp4" type="video/mp4">
+      </video>
+       <div id="videoClock" class="display-time"></div>
+    </div>
+
+    <div class="display-right">
+      <header class="header-display">
+        <img src="1.png" class="header-logo">
+        <h1>Tanauan City College : E-Queue</h1>
+      </header>
+
+      <div class="now-serving-section">
+        <h2>Now Serving</h2>
+
+        <div class="now-box registrar-box">
+          <h3>Registrar</h3>
+          <div id="displayRegistrarNow">---</div>
+        </div>
+
+        <div class="now-box guidance-box">
+          <h3>Guidance</h3>
+          <div id="displayGuidanceNow">---</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAITING QUEUE FOOTER -->
+<footer class="queue-footer">
+  <div class="queue-row">
+    <div class="queue-label">Registrar Waiting Queues</div>
+    <ul id="displayRegistrarQueue" class="queue-list"></ul>
+  </div>
+
+  <hr class="queue-separator">
+
+  <div class="queue-row">
+    <div class="queue-label">Guidance Waiting Queues</div>
+    <ul id="displayGuidanceQueue" class="queue-list"></ul>
+  </div>
+</footer>
+</body>
+</html>

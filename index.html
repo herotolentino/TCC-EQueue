@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCC E-Queue Student</title>
+  <link rel="icon" type="image/png" href="logoq.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  
+  <section id="home-page">
+    <div class="home-container">
+      <div class="home-nav">
+        <div class="nav-left">
+          <img src="logoq.png" alt="EQUEUE Logo" class="nav-logo">
+          <span class="nav-brand">EQUEUE</span>
+        </div>
+        <div class="nav-right">
+          <a href="#home-page">Home</a>
+          <a href="#services-info">Services</a>
+          <a href="#about-us">About Us</a>
+          <a href="#contact-us">Contact</a>
+        </div>
+      </div>
+
+      <div class="home-content">
+        <div class="home-left">
+<div class="home-left">
+  <h1>
+    <span class="black-text">QUEUE</span>
+    <span class="red-text">MANAGEMENT</span>
+    <span class="red-text">SYSTEM</span>
+  </h1>
+</div>
+          <button class="choose-btn" onclick="openSystem()">Get Started</button>
+        </div>
+        <div class="home-right">
+          <img src="1.png" alt="TCC Logo" class="tcc-logo">
+          <h2 class="school-name">Tanauan City College</h2>
+        </div>
+      </div>
+    </div>
+     </div>
+
+<section id="services-info" class="scroll-section">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p>We provide an easy-to-use web-based queuing system for the Guidance and Registrar offices of Tanauan City College. 
+      Our system allows students to secure queue numbers online, monitor their position in line, and receive timely updates, 
+      helping reduce waiting time and improve overall office efficiency.
+    </p>
+  </div>
+</section>
+<section id="about-us" class="scroll-section">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>Queue is a web-based Queuing Management System developed to streamline student transactions at Tanauan City College. 
+      Our goal is to make the process of obtaining services from the Guidance and Registrar offices faster, more organized, 
+      and convenient for both students and staff, ensuring a better overall experience.
+    </p>
+  </div>
+  </section>
+   <section id="Developers" class="scroll-section">
+      <h2>Developers</h2>
+      <div class="dev-grid">
+        <div class="dev-card"><img src="hero.png" alt="Hero Tolentino"><p>Hero Tolentino</p></div>
+        <div class="dev-card"><img src="Ali.jpg" alt="Alianna Olila"><p>Alianna Olila</p></div>
+        <div class="dev-card"><img src="kyle.png" alt="Kyle Bianca Patasin"><p>Kyle Bianca Patasin</p></div>
+        <div class="dev-card"><img src="ralph.png" alt="Ralph Jian Olan"><p>Ralph Jian Olan</p></div>
+        <div class="dev-card"><img src="jimson.png" alt="Jimson Quinto"><p>Jimson Quinto</p></div>
+      </section>
+
+    <section id="contact-us" class="scroll-section">
+      <h2>Contact Us</h2>
+      <p>Email: <b>herotolentino0910@gmail.com</b></p>
+      <p>Facebook: facebook.com/tcc.equeue</p>
+      <p>Phone: +63 912 345 6789</p>
+      <p>Address: Tanauan City College, Batangas, Philippines</p>
+    </section>
+  </section>
+   <footer>
+    <p>© 2025 EQUEUE. All rights reserved.</p>
+  </footer>
+
+  <section id="system-page">
+  <div class="screen active" id="services">
+    <div class="header-bar">
+      <img src="1.png" class="header-logo" alt="logo">
+      <span class="header-title">Tanauan City College : E-Queue</span>
+      <span class="header-clock" id="clock"></span>
+    </div>
+    <div class="documents-box">
+      <h3>Select a Service</h3>
+      <div class="service-btn-group">
+        <button class="service-btn" onclick="selectService('Registrar')">
+          <i class="fas fa-university service-icon"></i>
+          <span class="service-label">Registrar</span>
+        </button>
+        <button class="service-btn" onclick="selectService('Guidance')">
+          <i class="fas fa-user-graduate service-icon"></i>
+          <span class="service-label">Guidance</span>
+        </button>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="back-btn" onclick="closeSystem()">Back</button>
+    </div>
+  </div>
+
+  <div class="screen" id="formPage">
+    <div class="header-bar">
+      <img src="1.png" class="header-logo" alt="logo">
+      <span class="header-title">Tanauan City College : E-Queue</span>
+      <span class="header-clock" id="clock5"></span>
+    </div>
+    <div class="content-box">
+      <h2 id="formTitle">Fill Your Details</h2>
+      <input id="name" placeholder="Name">
+      <input id="idNumber" placeholder="ID Number (e.g. 0036-2023)">
+      <input id="program" placeholder="Program & Year/Section">
+      <select id="purpose"><option value="">Select Purpose</option></select>
+      <p class="error" id="errorMsg"></p>
+      <button class="submit-btn" onclick="submitForm()">Submit</button>
+    </div>
+    <div class="footer">
+      <button class="back-btn" onclick="goBackFromForm()">Back</button>
+    </div>
+  </div>
+
+  <div class="screen" id="queueResult">
+    <div class="header-bar">
+      <img src="1.png" class="header-logo" alt="logo">
+      <span class="header-title">Tanauan City College : E-Queue</span>
+      <span class="header-clock" id="clock6"></span>
+    </div>
+    <div class="content-box">
+      <h2>Your Queue Number</h2>
+      <div class="queue-box">
+        <h2 id="queueNumber"></h2>
+        <p>Please wait to be called. Thank you!</p>
+      </div>
+      <button class="submit-btn" onclick="reset()">Done</button>
+    </div>
+  </div>
+</section>
+
+    <div class="screen" id="formPage">
+      <div class="header-bar">
+        <img src="1.png" class="header-logo" alt="logo">
+        <span class="header-title">Tanauan City College : E-Queue</span>
+        <span class="header-clock" id="clock5"></span>
+      </div>
+      <div class="content-box">
+        <h2 id="formTitle">Fill Your Details</h2>
+        <input id="name" placeholder="Name">
+        <input id="idNumber" placeholder="ID Number (e.g. 0036-2023)">
+        <input id="program" placeholder="Program & Year/Section">
+        <select id="purpose"><option value="">Select Purpose</option></select>
+        <p class="error" id="errorMsg"></p>
+        <button class="submit-btn" onclick="submitForm()">Submit</button>
+      </div>
+      <div class="footer">
+        <button class="back-btn" onclick="goBackFromForm()">Back</button>
+      </div>
+    </div>
+
+    <div class="screen" id="queueResult">
+      <div class="header-bar">
+        <img src="1.png" class="header-logo" alt="logo">
+        <span class="header-title">Tanauan City College : E-Queue</span>
+        <span class="header-clock" id="clock6"></span>
+      </div>
+      <div class="content-box">
+        <h2>Your Queue Number</h2>
+        <div class="queue-box">
+          <h2 id="queueNumber"></h2>
+          <p>Please wait to be called. Thank you!</p>
+        </div>
+        <button class="submit-btn" onclick="reset()">Done</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
